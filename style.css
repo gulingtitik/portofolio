@@ -1,0 +1,402 @@
+#header{
+background-color: #23a6d5;
+	background-size: 400% 400%;
+	border: rgb(21, 21, 21);
+}
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: linear-gradient( #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	}
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+
+/* end navbar */
+#hero {
+  width: 100%;
+  height: 90%;
+  background: linear-gradient( #23a6d5, #23d5ab);
+	
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+#hero .container {
+  padding-top: 72px;
+  display: grid;
+  grid-template-columns : 50% auto;
+}
+
+
+#hero h1 {
+  margin: 0px 0 50px 10px;
+  font-size:100px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero h2 {
+  color: rgba(255, 255, 255, 0.6);
+  margin:0 10px 0 10px;
+  font-size: 24px;
+ font-family: "Montserrat", sans-serif;
+}
+#hero h4 {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0px 0px 0 10px;
+  font-size: 24px;
+  font-family: "Signika Negative", sans-serif;
+}
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+  #hero {
+    height: 100vh;
+    text-align: center;
+    
+  }
+
+  #hero .animated {
+    animation: none;
+  }
+
+  #hero .hero-img {
+    text-align: center;
+  }
+
+  #hero .hero-img img {
+    width: 50%;
+     
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #hero .hero-img img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+  }
+
+  #hero .btn-get-started {
+    font-size: 16px;
+    padding: 10px 24px 11px 24px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #3b69df;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #47b2e4;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.row-content p,li {
+  font-family: "Signika Negative", sans-serif;}
+
+#about{
+  background: #ffffff;
+}
+.SKILL li {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.teks-skill p {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  margin-left: 44px;
+  text-align: justify;
+}
+
+.wave{
+  margin:-60px 0 0px -15px;
+}
+
+.svg-img{
+  overflow-y: hidden;
+ text-align: center;
+ margin-top: -250px;
+ margin-left: -110px;
+}
+/* end skill section */
+
+
+.flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #8d8d8d;
+  perspective: 1000px; 
+  box-shadow: 0px 4px 8px #121212;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background: linear-gradient( #23a6d5, #23d5ab);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* end flip card */
+#bawah{
+  width: 100%;
+  height: 90%;
+ background-image: linear-gradient(to bottom, #23a6d5, #23d5ab);
+}
+
+#bawah .container {
+  padding-top: 72px;
+  display: grid;
+  grid-template-columns : 50% auto;
+}
+#about .container {
+  display: grid;
+  grid-template-columns : 50% auto;
+}
+
+#bawah h1 {
+  margin: 0 0 10px 10px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family:"Montserrat", sans-serif ;
+}
+
+#bawah li {
+  color: rgba(255, 255, 255, 0.6);
+  margin:0 50px 0 10px;
+  font-size: 24px;
+  font-family: "Signika Negative", sans-serif;
+}
+#bawah .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+  #bawah {
+    height: 100vh;
+    text-align: center;
+  }
+
+  #bawah .animated {
+    animation: none;
+  }
+
+  #bawah .hero-img {
+    text-align: center;
+  }
+  
+  #bawah .hero-img img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #bawah h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #bawah h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #bawah .hero-img img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 575px) {
+  #bawah .hero-img img {
+    width: 80%;
+  }
+
+  #bawah .btn-get-started {
+    font-size: 16px;
+    padding: 10px 24px 11px 24px;
+  }
+}
+
+
+#kaki{
+  display: grid;
+  grid-template-columns : 50% auto;
+}
+
+#kaki .contact,#kaki .email{
+  text-align: center;
+}
+footer {
+  height: 150px;
+  width: 100%;
+  background-color: #fff;
+  
+  text-align: center;
+  padding-top: 2%;
+  font-size: 12px;
+}
+footer .sosial-media button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e5e5e5;
+  outline: 1px solid rgb(0, 0, 0);
+  color: rgb(160, 160, 160);
+  margin-left: 5px;
+}
+footer .sosial-media button:hover {
+  background-color: #ffffff;
+  color: #242424;
+  outline: #121212;
+  transition: 0.5s;
+}
+footer small {
+  position: relative;
+  top: 13%;
+  font-size: 10px;
+  color: #707070;
+}
+footer .sosial-media i {
+  font-size: 20px;
+}
